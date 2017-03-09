@@ -6,59 +6,92 @@
 
 {% block content %}
 
+<style>
+  main {
+    font-size: 24px;
+  }
+  .tl-point {
+    border-left: 5px solid #0c0c0c;
+    padding: 0 0 2.4em 1em;
+    position: relative;
+  }
+  .tl-point:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -0.9em;
+    width: 1em;
+    height: 1em;
+    border: 0.3em solid #fff;
+    border-radius: 50%;
+    background: #0c0c0c;
+  }
+  .tl-point-done:before {
+    background: #fff;
+    content: '✔';
+    font-size: 27px;
+    font-weight: bold;
+    left: -0.8em;
+  }
+  .tl-point h2 {
+    margin-top: 1em;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .tl-hint {
+    color: #666;
+    padding-top:0.3em;
+    margin: 0.5em 0 -1em 0;
+  }
+</style>
+
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        The GOV.UK prototype kit
-        <span class="heading-secondary">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+        Applying for a provisional driving licence timeline
+      </h1>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <div class="tl-point tl-point-done">
+        <h2 class="">Apply online</h2>
+      </div>
 
-      <h2 class="heading-medium">About this page</h2>
+      <div class="tl-point">
+        <p class="tl-hint">Up to 3 weeks from now</p>
+        <h2 class="">Receive licence in the post</h2>
+        <h2 class="">Book theory test</h2>
+      </div>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+      <div class="tl-point">
+        <p class="tl-hint">After 1–2 weeks</p>
+        <h2 class="">Take theory test</h2>
+        <p>You can take your theory from your 17th birthday</p>
+        <p>If you fail your theory test you have to wait 3 days before you can take it again.</p>
+      </div>
 
-			<h2 class="heading-medium">Examples and documentation</h2>
+      <div class="tl-point">
+        <p class="tl-hint">When you’ve passed your theory test</p>
+        <h2 class="">Book your practical test</h2>
+        <p>
+          The waiting time in Gloucestershire right is 2–4 weeks.
+        </p>
+      </div>
 
-			<ul class="list list-bullet">
-				<li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-				<li><a href="https://github.com/alphagov/govuk_prototype_kit">GitHub</a></li>
-			</ul>
+      <div class="tl-point">
+        <p class="tl-hint">After 2–4 weeks</p>
+        <h2 class="">Take your practical test</h2>
+      </div>
 
-      <h2 class="heading-medium">Other resources</h2>
-
-			<ul class="list list-bullet">
-				<li>
-					<a href="https://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
+      <div class="tl-point">
+        <p class="tl-hint">After 1–4 weeks</p>
+        <h2 class="">You’re on the road!</h2>
+        <p>This is where you buy a car, arrange insurance, etc.</p>
+      </div>
 
     </div>
   </div>
 </main>
 
 {% endblock %}
-
-

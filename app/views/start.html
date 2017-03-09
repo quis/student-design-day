@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">When do you want to start driving?</h1>
+      <div class="form-group">
+
+        <fieldset>
+
+          <legend class="visually-hidden">How do you want to be contacted?</legend>
+
+          <label class="block-label selection-button-radio" data-target="contact-by-email" for="example-contact-by-email">
+            <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+            As soon as possible
+          </label>
+
+
+          <label class="block-label selection-button-radio" data-target="contact-by-phone" for="example-contact-by-phone">
+            <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+            Choose a date
+          </label>
+          <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+            <label class="form-label" for="contact-phone">Date</label>
+            <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+          </div>
+
+        </fieldset>
+      </div>
+
+      <a class="button button-start" href="/postcode" role="button">Next</a>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

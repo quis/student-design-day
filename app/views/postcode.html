@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">What’s your postcode?</h1>
+      <div class="form-group">
+
+        <fieldset>
+
+          <legend class="visually-hidden">How do you want to be contacted?</legend>
+
+          <div class="" id="contact-by-phone">
+            <p class="hint">This is so we can look up driving test availability in your area</p>
+            <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+          </div>
+
+        </fieldset>
+      </div>
+
+      <a class="button button-start" href="/" role="button">Next</a>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
